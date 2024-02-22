@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root {
+    --primary-color: #a03048;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', 'sans-serif';
+    color: #222;
+    background-color: #f5f5f5;
+    line-height: 1.5;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff;
+    height: 80px;
+    position: absolute;
+    width: 100%;
+    top: 30px;
+}
+
+.navbar .container {
+    justify-content: space-between;
+}
+
+.navbar-logo {
+    flex-direction: column;
+}
+
+.navbar .navbar-academy {
+    color: var(--primary-color);
+}
+
+.navbar h2 {
+    font-size: 1.5rem;
+    margin: 0 30px;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.navbar a {
+    padding: 10px;
+    margin: 0 15px;
+}
+
+.navbar a:hover {
+    font-weight: bold;
+    border-bottom: 1px solid #222;
+    border-spacing: 10px;
+    color: #222;
+}
+
+
+.showcase {
+    height: 500px;
+}
+
+.showcase-background::after {
+    content: "";
+    background-image: url("../images/showcase.jfif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 500px;
+}
+
+.showcase-content {
+    flex-direction: column;
+}
+
+.showcase-content h1 {
+    font-size: 3.5rem;
+    padding-top: 70px;
+}
+
+.showcase-content .btn {
+    background-color:rgba(0,0,0,0.15);
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 18px 90px;
+    margin-top: 5px;
+}
+
+.showcase-content .btn:hover {
+    background-color:rgba(0,0,0,0.2);
+}
+
+
+.offer-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    margin-top: 75px;
+    grid-column-gap: 2rem;
+}
+
+.offer-card {
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 5px 12px 25px #777;
+    margin: 0 30px;
+}
+
+.offer-card h3 {
+    width: 90%;
+    margin: 15px auto 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.offer-card img {
+    width: 50%;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+.offer-card p {
+    width: 75%;
+    margin: 0 auto 20px;
+    text-align: justify;
+}
+
+/* Subscription */
+
+.subscription {
+    background-color: #fff;
+    margin-top: 80px;
+}
+
+.subscription-container {
+    width: 70%;
+    margin: 0 auto;
+    gap: 80px;
+    padding: 70px 0;
+}
+
+.subscription-content {
+    align-self: flex-start;
+}
+
+.subscription-content h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.subscription-box .btn {
+    font-size: 1.5rem;
+    width: 300px;
+    height: 150px;
+    background-color: #fff2f5;
+    color: var(--primary-color);
+}
+
+.subscription-box .btn:hover {
+    background-color: #fcecef;
+    text-decoration: underline;
+}
+
+
+.footer {
+    height: 200px;
+    background-color: var(--primary-color);
+    flex-shrink: 1;
+}
+
+.footer .flex {
+    flex-direction: column;
+}
+
+.footer .social i {
+    margin: 0 15px;
+    color: #fff2f5;
+}
+
+.footer .copyright p {
+    font-size: 1.1rem;
+    color: #fff2f5;
+    padding-top: 5px;
+}
+
+.price-section {
+    margin: 200px auto 25px;
+}
+
+.price-section .offer-card h3 {
+    margin-bottom: 10px;
+    border: 1px solid var(--primary-color);
+    width: 70%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.price-section .price {
+    display: inline;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.price-section .price-btn {
+    width: 80%;
+    height: 45px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+/* Contact Info */
+
+.contact-info {
+    margin: 200px 0 85px;
+}
+
+.contact-info .container {
+    width: 55%;
+}
+
+.contact-info .flex {
+    justify-content: space-between;
+}
+
+.contact-info img {
+    width: 200px;
+}
+
+.contact-info h5 {
+    line-height: 3;
+    margin-top: 25px;
+}
+
+.contact-bold {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Contact Form */
+.contact-form {
+    padding-top: 50px;
+    background-color: #fff;
+}
+
+.contact-form .flex {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-form .container {
+    width: 70%;
+}
+
+.contact-form-content {
+    width: 50%;
+}
+
+.contact-form-content h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.contact-form .btn {
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    width: 40%;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.contact-form input[type="email"],
+.contact-form textarea {
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #e9e9e9;
+}
+
+.contact-form input[type="email"] {
+    height: 20px;
+    padding: 20px;
+}
+
+.contact-form textarea {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+/* Tablets and Under */
+@media(max-width: 768px) {
+    .offer-section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        text-align: center;
+        margin-top: 75px;
+        grid-row-gap: 20px;
+    }
+
+    .offer-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .offer-card img {
+        height: 150px;
+        width: auto;
+        max-width: 220px;
+        grid-row-end: span 2;
+        justify-self: flex-end;
+        margin-right: 30px;
+    }
+
+    .offer-card h3 {
+        text-decoration: underline;
+    }
+
+    .subscription-container {
+        width: 90%;
+    }
+
+    .subscription-content h2 {
+        text-align: center;
+    }
+
+    .subscription-content p {
+        text-align: justify;
+        margin-left: 5px;
+    }
+
+    .price-section {
+        margin: 180px auto 25px;
+    }
+
+    .price-section .offer-card h3 {
+        height: 90px;
+        margin: 30px auto;
+    }
+
+    .price-section .offer-card p {
+        padding-top: 15px;
+    }
+
+    .contact-info .container {
+        width: 80%;
+    }
+
+    .contact-form .container {
+        width: 80%;
+    }
+
+    .contact-form .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form-content {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .contact-form textarea {
+        width: 450px;
+        height: 150px;
+    }
+    
+}form {
+    max-width: 600px;
+    margin: auto;
+    background-color: #a03048;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+a {
+    color: #a03048;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    margin-top: 5px;
+}
+
+input[type="submit"] {
+    background-color: #a03048;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="range"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+input[type="submit"]:hover {
+    background-color: #a03048;
+}
+
+
+/* Mobile */
+@media(max-width: 600px) {
+    .navbar h2 {
+        font-size: 1.2rem;
+    }
+
+    .navbar a {
+        padding: 15px;
+        margin: 0 0px;
+    }
+
+    .showcase-content h1 {
+        font-size: 3.3rem;
+        margin-bottom: 20px;
+    }
+
+    .offer-section {
+        grid-row-gap: 30px;
+    }
+
+    .offer-card img {
+        height: 100px;
+        max-width: 200px;
+        grid-row-end: span 1;
+        justify-self: center;
+    }
+
+    .offer-card p {
+        grid-column-end: span 2;
+    }
+
+    .subscription-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .subscription-box {
+        justify-self: center;
+    }
+
+    .subscription-box .btn {
+        width: 350px;
+    }
+    
+    .subscription {
+        background-color: #fff;
+        margin-top: 25px;
+    }
+
+    .price-section .offer-card h3 {
+        margin-bottom: 10px;
+        width: 200px;
+        height: 100px;
+        grid-column-end: span 2;
+    }
+
+    .price-section form {
+        grid-column-end: span 2;
+    }
+
+    .contact-info .flex {
+        flex-direction: column-reverse;
+    }
+    
+    .contact-info img {
+        width: 125%;
+        height: 200px;
+    }
+
+    .contact-form textarea {
+        width: 300px;
+        height: 140px;
+    }
+
+    .contact-info {
+        margin: 100px 0 30px;
+    }
+}
+
+@media(max-width: 420px) {
+    .navbar {
+        top: 0;
+        height: 120px;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+    }
+    
+    .navbar nav {
+        margin-bottom: 25px;
+    }
+
+    .navbar a {
+        padding: 0 15px;
+    }
+
+    .showcase-content h1 {
+        font-size: 2rem;
+        padding-top: 40px;
+    }
+
+    .subscription-box .btn {
+        font-size: 1.4rem;
+        width: 220px;
+        height: 100px;
+    }
+}
+
+@media(max-width: 300px) {
+    .contact-form textarea {
+        width: 210px;
+        height: 120px;
+    }
+}
